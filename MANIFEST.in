@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include greenshine_customization *.css
+recursive-include greenshine_customization *.csv
+recursive-include greenshine_customization *.html
+recursive-include greenshine_customization *.ico
+recursive-include greenshine_customization *.js
+recursive-include greenshine_customization *.json
+recursive-include greenshine_customization *.md
+recursive-include greenshine_customization *.png
+recursive-include greenshine_customization *.py
+recursive-include greenshine_customization *.svg
+recursive-include greenshine_customization *.txt
+recursive-exclude greenshine_customization *.pyc
