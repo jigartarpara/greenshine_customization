@@ -23,9 +23,38 @@ def setup_custom_fields():
 				fieldtype='Link',
 				options='Survey Form',
 				insert_after='source'
+			),			
+		],
+		"Quotation": [
+			dict(
+				fieldname='greenshine',
+				label='Greenshine ',
+				fieldtype='Section Break',
+				insert_after='ignore_pricing_rule'
 			),
-					
-		]
+			dict(
+				fieldname='subject',
+				label='Subject',
+				fieldtype='Data',
+				insert_after='greenshine',
+			),
+			dict(
+				fieldname='location_area',
+				label='Location ',
+				fieldtype='Link',
+				options='Location',
+				insert_after='subject',
+			),	
+		],
+		"Quotation Item": [
+			dict(
+				fieldname='location',
+				label='Location ',
+				fieldtype='Link',
+				options='Location Area',
+				insert_after='customer_item_code'
+			),			
+		],
 	}
 
 	create_custom_fields(custom_fields)
