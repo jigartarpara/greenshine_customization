@@ -53,7 +53,19 @@ def setup_custom_fields():
 				fieldtype='Link',
 				options='Location Area',
 				insert_after='customer_item_code'
-			),			
+			),
+			dict(
+				fieldname='frequeny_per_year',
+				label='Frequency Per year ',
+				fieldtype='Float',
+				insert_after='stock_uom'
+			),		
+			dict(
+				fieldname='frequency_per_month',
+				label='Frequency Per Month ',
+				fieldtype='Float',
+				insert_after='frequeny_per_year'
+			),	
 		],
 	}
 
