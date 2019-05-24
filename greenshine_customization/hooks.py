@@ -120,3 +120,7 @@ app_license = "MIT"
 # 	"frappe.desk.doctype.event.event.get_events": "greenshine_customization.event.get_events"
 # }
 
+doctype_js = {
+	"Quotation" : "Customization/Quotation/quotation.js", 
+}
+
