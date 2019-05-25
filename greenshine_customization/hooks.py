@@ -87,6 +87,13 @@ app_license = "MIT"
 #	}
 # }
 
+
+doctype_js = {
+	"Quotation" : "customization/quotation/quotation.js"
+}
+
+
+
 # Scheduled Tasks
 # ---------------
 
@@ -119,8 +126,3 @@ app_license = "MIT"
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "greenshine_customization.event.get_events"
 # }
-
-doctype_js = {
-	"Quotation" : "Customization/Quotation/quotation.js", 
-}
-
