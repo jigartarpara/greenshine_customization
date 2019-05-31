@@ -89,7 +89,8 @@ app_license = "MIT"
 
 
 doctype_js = {
-	"Quotation" : "customization/quotation/quotation.js"
+	"Quotation" : "customization/quotation/quotation.js",
+	"Quotation Item" : "customization/quotation_item/quotation_item.js"
 }
 
 

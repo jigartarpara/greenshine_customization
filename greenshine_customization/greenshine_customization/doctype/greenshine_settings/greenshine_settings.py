@@ -27,6 +27,18 @@ def setup_custom_fields():
 		],
 		"Quotation": [
 			dict(
+				fieldname='contact_name',
+				label='Contact Name ',
+				fieldtype='Data',
+				insert_after='customer_name'
+			),
+			dict(
+				fieldname='Position',
+				label='Position ',
+				fieldtype='Data',
+				insert_after='contact_name'
+			),
+			dict(
 				fieldname='greenshine',
 				label='Greenshine ',
 				fieldtype='Section Break',
@@ -35,7 +47,8 @@ def setup_custom_fields():
 			dict(
 				fieldname='subject',
 				label='Subject',
-				fieldtype='Data',
+				fieldtype='Select',
+				Options='Quotation for cleaning and degreasing kitchen duct\nQuotation for water tank cleaning and disinfection\nQuotation for drain line cleaning\nQuotation for grease trap cleanin\nQuotation for pest control',
 				insert_after='greenshine',
 			),
 			dict(
@@ -55,18 +68,114 @@ def setup_custom_fields():
 				insert_after='customer_item_code'
 			),
 			dict(
-				fieldname='frequeny_per_year',
-				label='Frequency Per year ',
+				fieldname='total_one_time',
+				label='Total One Time ',
 				fieldtype='Float',
 				insert_after='stock_uom'
 			),		
 			dict(
-				fieldname='frequency_per_month',
-				label='Frequency Per Month ',
+				fieldname='frequency',
+				label='Frequency',
 				fieldtype='Float',
-				insert_after='frequeny_per_year'
+				insert_after='total_one_time'
+			),
+			dict(
+				fieldname='frequency_month',
+				label='Frequency Month',
+				fieldtype='Float',
+				insert_after='stock_qty'
+			),
+			dict(
+				fieldname='total_monthly',
+				label='Total Monthly',
+				fieldtype='Float',
+				insert_after='frequency_month'
 			),	
+			dict(
+				fieldname='total_year',
+				label='Total/Year',
+				fieldtype='Float',
+				insert_after='total_monthly'
+			),
 		],
+		"Sales Order Item": [
+			dict(
+				fieldname='location',
+				label='Location ',
+				fieldtype='Link',
+				options='Location Area',
+				insert_after='customer_item_code'
+			),
+			dict(
+				fieldname='total_one_time',
+				label='Total One Time ',
+				fieldtype='Float',
+				insert_after='stock_uom'
+			),		
+			dict(
+				fieldname='frequency',
+				label='Frequency',
+				fieldtype='Float',
+				insert_after='total_one_time'
+			),
+			dict(
+				fieldname='frequency_month',
+				label='Frequency Month',
+				fieldtype='Float',
+				insert_after='stock_qty'
+			),
+			dict(
+				fieldname='total_monthly',
+				label='Total Monthly',
+				fieldtype='Float',
+				insert_after='frequency_month'
+			),	
+			dict(
+				fieldname='total_year',
+				label='Total/Year',
+				fieldtype='Float',
+				insert_after='total_monthly'
+			),
+		],
+		"Sales Invoice Item": [
+			dict(
+				fieldname='location',
+				label='Location ',
+				fieldtype='Link',
+				options='Location Area',
+				insert_after='customer_item_code'
+			),
+			dict(
+				fieldname='total_one_time',
+				label='Total One Time ',
+				fieldtype='Float',
+				insert_after='stock_uom'
+			),		
+			dict(
+				fieldname='frequency',
+				label='Frequency',
+				fieldtype='Float',
+				insert_after='total_one_time'
+			),
+			dict(
+				fieldname='frequency_month',
+				label='Frequency Month',
+				fieldtype='Float',
+				insert_after='stock_qty'
+			),
+			dict(
+				fieldname='total_monthly',
+				label='Total Monthly',
+				fieldtype='Float',
+				insert_after='frequency_month'
+			),	
+			dict(
+				fieldname='total_year',
+				label='Total/Year',
+				fieldtype='Float',
+				insert_after='total_monthly'
+			),
+		]
 	}
 
 	create_custom_fields(custom_fields)
