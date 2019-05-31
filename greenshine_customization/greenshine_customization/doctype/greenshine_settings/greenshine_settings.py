@@ -33,7 +33,7 @@ def setup_custom_fields():
 				insert_after='customer_name'
 			),
 			dict(
-				fieldname='Position',
+				fieldname='position',
 				label='Position ',
 				fieldtype='Data',
 				insert_after='contact_name'
@@ -42,7 +42,7 @@ def setup_custom_fields():
 				fieldname='greenshine',
 				label='Greenshine ',
 				fieldtype='Section Break',
-				insert_after='ignore_pricing_rule'
+				insert_after='position'
 			),
 			dict(
 				fieldname='subject',
