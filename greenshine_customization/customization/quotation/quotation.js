@@ -1,35 +1,29 @@
-console.log("Hello world");
 frappe.ui.form.on('Quotation', {
-	refresh: function(frm) {
-		frm.add_custom_button(__('Make Contract'), function() {
-				// frappe.call({
-				// 	method:"greenshine_customization.greenshine_customization.Quotation.make_contract",
-				// })
-		}).addClass("btn-primary");
-	}
+    refresh: function(frm) {
+        frm.add_custom_button(__('Make Contract'), function() {
+            
+        }).addClass("btn-primary");
+    }
 });
 
-// frappe.ui.form.on("Quotation Item", {
-//     refresh: function(frm) {
-//         // make calculation on the fields
-//         var a = frm.doc.amount * frm.doc.frequency;
-//         var b = ( frm.doc.amount * frm.doc.frequency ) * frm.doc.frequency_month
-//         frm.set_value("total_monthly", a);
-//         frm.set_value("total_year", b);
-//         frm.refresh_field("total_monthly, total_year");
-
-//     }
-// });
-
 frappe.ui.form.on('Quotation Item', {
-	item_code: function(frm, cdt, cdn) {
-		console.log("Item table")
-		var child = locals[cdt][cdn];
-		console.log(child.qty);
-		console.log(child.rate);
-		console.log(child.frequency_month);
-		
-    }
+	qty: function(frm, cdt, cdn) {
+		calculate_change_data(frm,cdt,cdn);
+    },
+    frequency: function(frm, cdt, cdn) {
+		calculate_change_data(frm,cdt,cdn);
+    },
+    rate: function(frm, cdt, cdn) {
+		calculate_change_data(frm,cdt,cdn);
+    },
+    frequency_month: function(frm, cdt, cdn) {
+		calculate_change_data(frm,cdt,cdn);
+    },
 })
 
-
+var calculate_change_data = function(frm,cdt,cdn) {
+    var child = locals[cdt][cdn];
+    frappe.model.set_value(child.doctype, child.name, "total_one_time", child.qty*child.rate);       
+    frappe.model.set_value(child.doctype, child.name, "total_monthly", child.total_one_time*child.frequency);       
+    frappe.model.set_value(child.doctype, child.name, "total_year", child.total_monthly*child.frequency_month);       
+}

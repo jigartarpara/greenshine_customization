@@ -36,7 +36,7 @@ def setup_custom_fields():
 				fieldname='position',
 				label='Position ',
 				fieldtype='Data',
-				insert_after='contact_name'
+				insert_after='order_type'
 			),
 			dict(
 				fieldname='greenshine',
@@ -52,11 +52,16 @@ def setup_custom_fields():
 				insert_after='greenshine',
 			),
 			dict(
+				fieldname='cb',
+				fieldtype='Column Break',
+				insert_after='subject',
+			),
+			dict(
 				fieldname='location_area',
 				label='Location ',
 				fieldtype='Link',
 				options='Location',
-				insert_after='subject',
+				insert_after='cb',
 			),	
 		],
 		"Quotation Item": [
@@ -71,6 +76,7 @@ def setup_custom_fields():
 				fieldname='total_one_time',
 				label='Total One Time ',
 				fieldtype='Currency',
+				read_only='1',
 				insert_after='stock_uom'
 			),		
 			dict(
@@ -82,6 +88,8 @@ def setup_custom_fields():
 			dict(
 				fieldname='frequency_month',
 				label='Frequency Month',
+				fetch_from='uom.frequency_month',
+				read_only='1',
 				fieldtype='Float',
 				insert_after='stock_qty'
 			),
@@ -89,12 +97,14 @@ def setup_custom_fields():
 				fieldname='total_monthly',
 				label='Total Monthly',
 				fieldtype='Currency',
+				read_only='1',
 				insert_after='frequency_month'
 			),	
 			dict(
 				fieldname='total_year',
 				label='Total/Year',
 				fieldtype='Currency',
+				read_only='1',
 				insert_after='total_monthly'
 			),
 		],
@@ -110,6 +120,7 @@ def setup_custom_fields():
 				fieldname='total_one_time',
 				label='Total One Time ',
 				fieldtype='Currency',
+				read_only='1',
 				insert_after='stock_uom'
 			),		
 			dict(
@@ -121,19 +132,23 @@ def setup_custom_fields():
 			dict(
 				fieldname='frequency_month',
 				label='Frequency Month',
+				fetch_from='uom.frequency_month',
 				fieldtype='Float',
+				read_only='1',
 				insert_after='stock_qty'
 			),
 			dict(
 				fieldname='total_monthly',
 				label='Total Monthly',
 				fieldtype='Currency',
+				read_only='1',
 				insert_after='frequency_month'
 			),	
 			dict(
 				fieldname='total_year',
 				label='Total/Year',
 				fieldtype='Currency',
+				read_only='1',
 				insert_after='total_monthly'
 			),
 		],
@@ -149,6 +164,7 @@ def setup_custom_fields():
 				fieldname='total_one_time',
 				label='Total One Time ',
 				fieldtype='Currency',
+				read_only='1',
 				insert_after='stock_uom'
 			),		
 			dict(
@@ -161,6 +177,8 @@ def setup_custom_fields():
 				fieldname='frequency_month',
 				label='Frequency Month',
 				fieldtype='Float',
+				fetch_from='uom.frequency_month', 
+				read_only='1',
 				insert_after='stock_qty'
 			),
 			dict(
@@ -173,9 +191,18 @@ def setup_custom_fields():
 				fieldname='total_year',
 				label='Total/Year',
 				fieldtype='Currency',
+				read_only='1',
 				insert_after='total_monthly'
 			),
-		]
+		],
+		"UOM": [
+			dict(
+				fieldname='frequency_month',
+				label='Frequency Month ',
+				fieldtype='Data',
+				insert_after='must_be_whole_number'
+			),
+		]	
 	}
 
 	create_custom_fields(custom_fields)
