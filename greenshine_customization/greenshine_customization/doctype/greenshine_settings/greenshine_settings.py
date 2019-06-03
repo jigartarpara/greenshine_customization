@@ -70,13 +70,13 @@ def setup_custom_fields():
 			dict(
 				fieldname='total_one_time',
 				label='Total One Time ',
-				fieldtype='Float',
+				fieldtype='Currency',
 				insert_after='stock_uom'
 			),		
 			dict(
 				fieldname='frequency',
 				label='Frequency',
-				fieldtype='Float',
+				fieldtype='Currency',
 				insert_after='total_one_time'
 			),
 			dict(
@@ -88,13 +88,13 @@ def setup_custom_fields():
 			dict(
 				fieldname='total_monthly',
 				label='Total Monthly',
-				fieldtype='Float',
+				fieldtype='Currency',
 				insert_after='frequency_month'
 			),	
 			dict(
 				fieldname='total_year',
 				label='Total/Year',
-				fieldtype='Float',
+				fieldtype='Currency',
 				insert_after='total_monthly'
 			),
 		],
@@ -109,13 +109,13 @@ def setup_custom_fields():
 			dict(
 				fieldname='total_one_time',
 				label='Total One Time ',
-				fieldtype='Float',
+				fieldtype='Currency',
 				insert_after='stock_uom'
 			),		
 			dict(
 				fieldname='frequency',
 				label='Frequency',
-				fieldtype='Float',
+				fieldtype='Currency',
 				insert_after='total_one_time'
 			),
 			dict(
@@ -127,13 +127,13 @@ def setup_custom_fields():
 			dict(
 				fieldname='total_monthly',
 				label='Total Monthly',
-				fieldtype='Float',
+				fieldtype='Currency',
 				insert_after='frequency_month'
 			),	
 			dict(
 				fieldname='total_year',
 				label='Total/Year',
-				fieldtype='Float',
+				fieldtype='Currency',
 				insert_after='total_monthly'
 			),
 		],
@@ -148,13 +148,13 @@ def setup_custom_fields():
 			dict(
 				fieldname='total_one_time',
 				label='Total One Time ',
-				fieldtype='Float',
+				fieldtype='Currency',
 				insert_after='stock_uom'
 			),		
 			dict(
 				fieldname='frequency',
 				label='Frequency',
-				fieldtype='Float',
+				fieldtype='Currency',
 				insert_after='total_one_time'
 			),
 			dict(
@@ -166,13 +166,13 @@ def setup_custom_fields():
 			dict(
 				fieldname='total_monthly',
 				label='Total Monthly',
-				fieldtype='Float',
+				fieldtype='Currency',
 				insert_after='frequency_month'
 			),	
 			dict(
 				fieldname='total_year',
 				label='Total/Year',
-				fieldtype='Float',
+				fieldtype='Currency',
 				insert_after='total_monthly'
 			),
 		]
