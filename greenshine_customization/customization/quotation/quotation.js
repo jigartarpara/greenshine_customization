@@ -25,8 +25,10 @@ frappe.ui.form.on('Quotation Item', {
 	item_code: function(frm, cdt, cdn) {
 		console.log("Item table")
 		var child = locals[cdt][cdn];
+		console.log(child.qty);
+		console.log(child.rate);
 		console.log(child.frequency_month);
-		console.log(child);
+		
     }
 })
 
