@@ -13,3 +13,4 @@ def make_contract(source_name, target_doc="None"):
     target_doc.run_method("calculate_taxes_and_totals")
 
     return target_doc
+

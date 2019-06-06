@@ -62,7 +62,22 @@ def setup_custom_fields():
 				fieldtype='Link',
 				options='Location',
 				insert_after='cb',
+			),
+			dict(
+				fieldname='final_total_month',
+				label='Final Total Month ',
+				fieldtype='Currency',
+				read_only='1',
+				insert_after='in_words',
+			),
+			dict(
+				fieldname='final_total',
+				label='Final Total ',
+				fieldtype='Currency',
+				read_only='1',
+				insert_after='final_total_month',
 			),	
+			
 		],
 		"Quotation Item": [
 			dict(
@@ -89,9 +104,9 @@ def setup_custom_fields():
 				fieldname='frequency_month',
 				label='Frequency Month',
 				fetch_from='uom.frequency_month',
-				read_only='1',
 				fieldtype='Float',
-				insert_after='stock_qty'
+				insert_after='stock_qty',
+				read_only='0',
 			),
 			dict(
 				fieldname='total_monthly',
@@ -160,13 +175,20 @@ def setup_custom_fields():
 				options='Location Area',
 				insert_after='customer_item_code'
 			),
+			
 			dict(
 				fieldname='total_one_time',
 				label='Total One Time ',
 				fieldtype='Currency',
 				read_only='1',
 				insert_after='stock_uom'
-			),		
+			),	
+			dict(
+				fieldname='comletion_date',
+				label='Completion Date ',
+				fieldtype='Date',
+				insert_after='quantity_and_rate'
+			),	
 			dict(
 				fieldname='frequency',
 				label='Frequency',
@@ -202,7 +224,46 @@ def setup_custom_fields():
 				fieldtype='Data',
 				insert_after='must_be_whole_number'
 			),
-		]	
+		],
+		"Sales Invoice": [
+			dict(
+				fieldname='customer_lpo',
+				label='Customer LPO ',
+				fieldtype='Data',
+				insert_after='customer_name'
+			),
+			dict(
+				fieldname='gsi_ref',
+				label='GSI Ref ',
+				fieldtype='Link',
+				options='Quotation',
+				insert_after='customer_lpo'
+			),
+		],
+		"Sales Order": [
+			dict(
+				fieldname='customer_lpo',
+				label='Customer LPO ',
+				fieldtype='Data',
+				insert_after='customer_name'
+			),
+			dict(
+				fieldname='gsi_ref',
+				label='GSI Ref ',
+				fieldtype='Link',
+				options='Quotation',
+				insert_after='customer_lpo'
+			),
+		],
+		"Customer": [
+			dict(
+				fieldname='customer_lpo',
+				label='Customer LPO ',
+				fieldtype='Data',
+				insert_after='lead_name'
+			),
+		]
+
 	}
 
 	create_custom_fields(custom_fields)
