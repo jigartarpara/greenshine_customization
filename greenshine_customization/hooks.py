@@ -92,6 +92,7 @@ doc_events = {
 
 doctype_js = {
 	"Quotation" : "customization/quotation/quotation.js",
+	"Sales Invoice" : "customization/salesinvoice/salesinvoice.js",
 }
 
 
