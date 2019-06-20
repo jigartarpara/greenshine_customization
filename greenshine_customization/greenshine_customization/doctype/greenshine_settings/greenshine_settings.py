@@ -64,6 +64,26 @@ def setup_custom_fields():
 				insert_after='cb',
 			),
 			dict(
+				fieldname='sc1',
+				label='Welcome Terms ',
+				fieldtype='Section Break',
+				insert_after='location_area',
+			),
+			dict(
+				fieldname='greenshine_terms',
+				label='Greenshine Terms ',
+				fieldtype='Link',
+				options='Terms and Conditions',
+				insert_after='sc1',
+			),
+			dict(
+				fieldname='term_detail',
+				label='Description ',
+				fieldtype='Text Editor',
+				fetch_from='greenshine_terms.terms',
+				insert_after='greenshine_terms',
+			),
+			dict(
 				fieldname='final_total_month',
 				label='Final Total Month ',
 				fieldtype='Currency',
