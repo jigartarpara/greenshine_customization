@@ -259,6 +259,13 @@ def setup_custom_fields():
 				options='Quotation',
 				insert_after='customer_lpo'
 			),
+			dict(
+				fieldname='old_gsi',
+				label='GSI ',
+				fieldtype='Data',
+				read_only='1',
+				insert_after='due_date'
+			),
 		],
 		"Sales Order": [
 			dict(
