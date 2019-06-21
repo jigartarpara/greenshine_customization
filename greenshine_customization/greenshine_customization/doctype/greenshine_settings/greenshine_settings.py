@@ -65,13 +65,13 @@ def setup_custom_fields():
 			),
 			dict(
 				fieldname='sc1',
-				label='Welcome Terms ',
+				label='Terms ',
 				fieldtype='Section Break',
 				insert_after='location_area',
 			),
 			dict(
 				fieldname='greenshine_terms',
-				label='Greenshine Terms ',
+				label='Quote Intro ',
 				fieldtype='Link',
 				options='Terms and Conditions',
 				insert_after='sc1',
