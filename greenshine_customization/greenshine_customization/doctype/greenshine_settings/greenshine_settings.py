@@ -33,10 +33,29 @@ def setup_custom_fields():
 				insert_after='customer_name'
 			),
 			dict(
+				fieldname='sales_person',
+				label='Sales Person ',
+				fieldtype='Link',
+				options='Sales Person',
+				insert_after='contact_name'
+			),
+			dict(
+				fieldname='contact_no',
+				label='Contact_no ',
+				fieldtype='Data',
+				insert_after='sales_person'
+			),
+			dict(
 				fieldname='position',
-				label='Position ',
+				label='Position',
 				fieldtype='Data',
 				insert_after='order_type'
+			),
+			dict(
+				fieldname='email',
+				label='Email ',
+				fieldtype='Data',
+				insert_after='position'
 			),
 			dict(
 				fieldname='greenshine',
@@ -265,6 +284,13 @@ def setup_custom_fields():
 				fieldtype='Data',
 				read_only='1',
 				insert_after='due_date'
+			),
+			dict(
+				fieldname='location_area',
+				label='Location Area ',
+				fieldtype='Link',
+				options='Location Area',
+				insert_after='gsi_ref'
 			),
 		],
 		"Sales Order": [
