@@ -8,3 +8,9 @@ from frappe.model.document import Document
 
 class NamingSeriesMapping(Document):
 	pass
+
+@frappe.whitelist()
+def get_series():
+	return {
+		"naming_series" : frappe.get_meta("Payment Entry").get_options("naming_series") or "SO-Shopify-",
+	}
