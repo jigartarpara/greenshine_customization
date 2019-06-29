@@ -126,11 +126,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
-<<<<<<< HEAD
  "modified": "2019-06-29 13:26:46.740696", 
-=======
- "modified": "2019-06-29 14:23:48.671905", 
->>>>>>> 5678745a2ee7ddcf72bcdb1e4cb49433271bcb22
  "modified_by": "Administrator", 
  "module": "Greenshine Customization", 
  "name": "Naming Series Mapping", 
