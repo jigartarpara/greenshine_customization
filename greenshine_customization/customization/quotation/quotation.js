@@ -1,9 +1,16 @@
 frappe.ui.form.on('Quotation', {
-    refresh: function(frm) {
-        frm.add_custom_button(__('Make Contract'), function() {
-            
-        }).addClass("btn-primary");
-    }
+  refresh: function(frm) {
+      
+        frm.add_custom_button(__("Greenshine Contract"), function(){
+           
+          frappe.model.open_mapped_doc({
+            method: 
+            "greenshine_customization.greenshine_customization.doctype.greenshine_contract.greenshine_contract.make_contract",
+            frm: cur_frm
+          })
+        }, __("Make"));
+      },
+
 });
 
 frappe.ui.form.on('Quotation Item', {
