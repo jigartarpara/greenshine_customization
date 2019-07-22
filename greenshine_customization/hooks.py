@@ -81,7 +81,7 @@ app_license = "MIT"
 
 doc_events = {
 	"Quotation": {
-		"on_update": "greenshine_customization.utils.on_update"
+		"onload": "greenshine_customization.utils.onload"
 	},
 	"Sales Invoice": {
 		"on_update": "greenshine_customization.utils.on_update"

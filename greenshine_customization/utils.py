@@ -1,8 +1,5 @@
 import frappe
-def on_update(doc, method):
-    print("Data ")
-    print(doc)
-    print(method)
+def onload(doc, method):
     total = 0 
     total_month = 0
     test = 0
@@ -13,5 +10,3 @@ def on_update(doc, method):
     doc.final_total = total
     doc.final_total_month = total_month 
     doc.total = test
-    # doc.save()
-    # frappe.db.commit()

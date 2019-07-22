@@ -7,4 +7,6 @@ import frappe
 from frappe.model.document import Document
 
 class SurveyForm(Document):
-	pass
+	def onload(self):
+		customer = frappe.get_value("Customer", {"lead_name" : self.lead},['name'])
+		self.customer = customer

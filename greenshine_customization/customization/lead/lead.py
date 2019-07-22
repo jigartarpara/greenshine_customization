@@ -7,10 +7,9 @@ def make_survey_form(source_name, target_doc=None):
 		{"Lead": {
 			"doctype": "Survey Form",
 			"field_map": {
-				"lead_name": "survey_form_to",
 				"name": "lead",
-				"lead_name": "comapny_name",
-				"company_name": "comapny_name",
+				"lead_name": "company_name",
+				"company_name": "name_of_kitchen",
 				"email_id": "email",
 				"mobile_no": "mobile"
 			}
