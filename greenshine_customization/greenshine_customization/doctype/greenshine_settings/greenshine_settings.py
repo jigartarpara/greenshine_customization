@@ -234,6 +234,7 @@ def setup_custom_fields():
 				fieldtype='Link',
 				options='Location',
 				insert_after='location',
+				allow_on_submit='1'
 			),
 			dict(
 				fieldname='total_one_time',
