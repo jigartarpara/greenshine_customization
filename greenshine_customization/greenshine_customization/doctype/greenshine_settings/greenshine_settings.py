@@ -121,10 +121,17 @@ def setup_custom_fields():
 		"Quotation Item": [
 			dict(
 				fieldname='location',
-				label='Location ',
+				label='Location Area',
 				fieldtype='Link',
 				options='Location Area',
 				insert_after='customer_item_code'
+			),
+			dict(
+				fieldname='_location',
+				label='Location ',
+				fieldtype='Link',
+				options='Location',
+				insert_after='location',
 			),
 			dict(
 				fieldname='total_one_time',
@@ -165,10 +172,17 @@ def setup_custom_fields():
 		"Sales Order Item": [
 			dict(
 				fieldname='location',
-				label='Location ',
+				label='Location Area ',
 				fieldtype='Link',
 				options='Location Area',
 				insert_after='customer_item_code'
+			),
+			dict(
+				fieldname='_location',
+				label='Location ',
+				fieldtype='Link',
+				options='Location',
+				insert_after='location',
 			),
 			dict(
 				fieldname='total_one_time',
@@ -209,12 +223,18 @@ def setup_custom_fields():
 		"Sales Invoice Item": [
 			dict(
 				fieldname='location',
-				label='Location ',
+				label='Location Area',
 				fieldtype='Link',
 				options='Location Area',
 				insert_after='customer_item_code'
 			),
-			
+			dict(
+				fieldname='_location',
+				label='Location ',
+				fieldtype='Link',
+				options='Location',
+				insert_after='location',
+			),
 			dict(
 				fieldname='total_one_time',
 				label='Total One Time ',
