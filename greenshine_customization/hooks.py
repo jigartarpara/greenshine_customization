@@ -83,9 +83,9 @@ doc_events = {
 	"Quotation": {
 		"onload": "greenshine_customization.utils.onload"
 	},
-	"Sales Invoice": {
-		"on_update": "greenshine_customization.utils.on_update"
-	}
+	# "Sales Invoice": {
+	# 	"on_update": "greenshine_customization.utils.on_update"
+	# }
 
 }
 
