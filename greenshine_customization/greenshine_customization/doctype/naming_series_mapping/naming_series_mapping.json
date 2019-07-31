@@ -126,7 +126,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2019-07-31 11:08:40.391657", 
+ "modified": "2019-07-31 11:38:57.177492", 
  "modified_by": "Administrator", 
  "module": "Greenshine Customization", 
  "name": "Naming Series Mapping", 
@@ -160,7 +160,7 @@
  "sort_field": "modified", 
  "sort_order": "ASC", 
  "title_field": "naming_series", 
- "track_changes": 1, 
+ "track_changes": 0, 
  "track_seen": 0, 
  "track_views": 0
 }
